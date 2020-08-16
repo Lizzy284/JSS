@@ -30,7 +30,7 @@ class ApplyButton extends React.Component {
       `/*\n Snippet ID: ${
         message.id
       }\n Author: ${message.author.username}\n Date Created: Now\n */${
-        this.props.message.content.split("```js")[1].split("```")[0]
+        this.props.message.content.split("```js", "```JS")[1].split("```")[0]
       }`, (err) => {
           if(err) console.error(err)
       }
