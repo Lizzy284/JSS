@@ -4,7 +4,7 @@ const { appendFile } = require("fs");
 const path = require("path")
 class ApplyButton extends React.Component {
   render() {
-    if (!this.props.message.content.includes("```js")) return <></>;
+    if (!this.props.message.content.includes("```js", "```JS")) return <></>;
     return (
       <div
         className={["JSSApply", false ? "applied" : ""]
